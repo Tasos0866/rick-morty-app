@@ -11,6 +11,7 @@ import { CharactersComponent } from "./characters/characters.component";
 import { MatCardModule, MatListModule } from "@angular/material";
 import { MatDividerModule } from "@angular/material/divider";
 import { HttpClientModule } from "@angular/common/http";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from "@angular/common/http";
     NavBarComponent,
     HomeComponent,
     AboutComponent,
-    CharactersComponent
+    CharactersComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
