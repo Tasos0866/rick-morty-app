@@ -1,21 +1,24 @@
 <mat-card class="card">
-    <img mat-card-image class="card-image"
-        src="https://rickandmortyapi.com/api/character/avatar/86.jpeg">
-    <mat-card-title-group class= title-group>
-        <mat-card-title class="name">Name Here</mat-card-title>
-        <mat-card-subtitle class="info">id:1234, info: abcd</mat-card-subtitle>
+    <img
+        mat-card-image
+        class="card-image"
+        src="https://rickandmortyapi.com/api/character/avatar/86.jpeg"
+        />
+    <mat-card-title-group class="title-group">
+        <mat-card-title class="name">NAME: {{ name }}</mat-card-title>
+        <mat-card-subtitle class="info">id: , info: </mat-card-subtitle>
     </mat-card-title-group>
 
-
     <mat-list class="card-list">
-        <mat-list-item class="item">STATUS</mat-list-item>
+        <mat-list-item class="item">STATUS: </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>SPECIES</mat-list-item>
+        <mat-list-item>SPECIES: </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>GENDER</mat-list-item>
+        <mat-list-item>GENDER: </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>ORIGIN</mat-list-item>
+        <mat-list-item>ORIGIN :</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>LAST LOCATION</mat-list-item>
+        <mat-list-item>LAST LOCATION: </mat-list-item>
     </mat-list>
 </mat-card>
+<h1>{{ this.response?.name }}</h1>

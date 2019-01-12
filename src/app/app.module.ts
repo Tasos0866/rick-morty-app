@@ -10,6 +10,7 @@ import { routeConfig } from "./nav-bar/routeConfig";
 import { CharactersComponent } from "./characters/characters.component";
 import { MatCardModule, MatListModule } from "@angular/material";
 import { MatDividerModule } from "@angular/material/divider";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatDividerModule } from "@angular/material/divider";
     RouterModule.forRoot(routeConfig),
     MatCardModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
