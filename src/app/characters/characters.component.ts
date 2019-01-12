@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { CharactersService } from "../characters.service";
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: "app-characters",
@@ -7,20 +7,10 @@ import { CharactersService } from "../characters.service";
   templateUrl: "./characters.component.html"
 })
 export class CharactersComponent implements OnInit {
-  response: any;
+  @Input('character') character: Character;
 
-  constructor(
-    private charactersService: CharactersService,
-    private id: number
-  ) {
-    this.charactersService = charactersService;
-    this.id = id;
-  }
+  constructor() {}
 
   ngOnInit() {
-    let obs = this.charactersService.getCharacter(this.id);
-    obs.subscribe(response => {
-      this.response = response;
-    });
   }
 }

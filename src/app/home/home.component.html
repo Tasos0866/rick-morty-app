@@ -1,1 +1,3 @@
-<app-characters></app-characters>
+<div *ngFor="let char of allCharacters?.results">
+  <app-characters [character]="char"></app-characters>
+</div>

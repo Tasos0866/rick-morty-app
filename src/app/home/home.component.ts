@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CharactersComponent } from "../characters/characters.component";
-import { CharactersService } from "../characters.service";
-import { HttpClient } from "@angular/common/http";
+import { ApiService } from "../services/api.service";
 
 @Component({
   selector: "app-home",
@@ -9,11 +7,15 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  private http: HttpClient;
+  allCharacters: AllCharacters;
 
-  constructor() {}
+  constructor(
+    private apiService: ApiService,
+  ) {}
 
   ngOnInit() {
-    new CharactersComponent(new CharactersService(this.http), 2);
+    this.apiService.getCharacters().subscribe( allCharacters => {
+      this.allCharacters = allCharacters;
+    });
   }
 }
