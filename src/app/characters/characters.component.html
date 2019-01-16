@@ -2,23 +2,22 @@
     <img
         mat-card-image
         class="card-image"
-        src="https://rickandmortyapi.com/api/character/avatar/86.jpeg"
+        src="{{ character.image }}"
         />
     <mat-card-title-group class="title-group">
         <mat-card-title class="name">NAME: {{ character.name }}</mat-card-title>
-        <mat-card-subtitle class="info">id: , info: </mat-card-subtitle>
+        <mat-card-subtitle class="info">id: {{ character.id }}</mat-card-subtitle>
     </mat-card-title-group>
 
     <mat-list class="card-list">
-        <mat-list-item class="item">STATUS: </mat-list-item>
+        <mat-list-item class="item">STATUS: {{ character.status }}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>SPECIES: </mat-list-item>
+        <mat-list-item>SPECIES: {{ character.species }}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>GENDER: </mat-list-item>
+        <mat-list-item>GENDER: {{ character.gender }}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>ORIGIN :</mat-list-item>
+        <mat-list-item>ORIGIN : {{ character.origin.name }}</mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>LAST LOCATION: </mat-list-item>
-    </mat-list>
-</mat-card>
-<h1>{{ this.response?.name }}</h1>
+        <mat-list-item><p>LAST<br> LOCATION: {{ character.location.name }}</mat-list-item>
+        </mat-list>
+    </mat-card>

@@ -1,8 +1,7 @@
 .card {
   background-color: rgba(212, 196, 255, 0.541);
   position: relative;
-  max-width: 16%;
-  min-height: 60%;
+  max-width: 90%;
   margin: 0;
   padding: 0;
 }

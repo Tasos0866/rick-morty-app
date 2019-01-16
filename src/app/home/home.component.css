@@ -1,0 +1,12 @@
+#characterDiv {
+  position: relative;
+  min-width: 25%;
+  max-height: 70%;
+  margin-bottom: 50px;
+  display: inline-table;
+  table-layout: fixed;
+}
+#content {
+  display: table-cell;
+  width: 100%;
+}
