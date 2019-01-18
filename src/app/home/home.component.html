@@ -1,5 +1,7 @@
-<div id="characterDiv" *ngFor="let char of allCharacters?.results">
+<div id="characterDiv" *ngFor="let char of allCharacters |
+  paginate: {itemsPerPage: 8, currentPage: page}">
   <div id="content">
     <app-characters [character]="char"></app-characters>
   </div>
 </div>
+<pagination-controls (pageChange)="page= $event"></pagination-controls>

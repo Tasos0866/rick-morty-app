@@ -7,15 +7,17 @@ import { ApiService } from "../services/api.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  allCharacters: AllCharacters;
+  currentPageCharacters: Character[];
+  allCharacters: Character[];
 
-  constructor(
-    private apiService: ApiService,
-  ) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
-    this.apiService.getCharacters().subscribe( allCharacters => {
-      this.allCharacters = allCharacters;
-    });
+    for (let page = 1; page <= 20; page++) {
+      this.apiService.getCharacters(page).subscribe(characters => {
+        this.currentPageCharacters = characters.results;
+        this.allCharacters.concat(this.currentPageCharacters);
+      });
+    }
   }
 }
