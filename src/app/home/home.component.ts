@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ApiService } from "../services/api.service";
+import { send } from "q";
 
 @Component({
   selector: "app-home",
@@ -7,17 +8,17 @@ import { ApiService } from "../services/api.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  currentPageCharacters: Character[];
-  allCharacters: Character[];
+  currentPageCharacters: AllCharacters;
+  characterResults: Character[] = [];
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     for (let page = 1; page <= 20; page++) {
-      this.apiService.getCharacters(page).subscribe(characters => {
-        this.currentPageCharacters = characters.results;
-        this.allCharacters.concat(this.currentPageCharacters);
-      });
+      this.currentPageCharacters = await this.apiService.getCharacters(page);
+      for (let results of this.currentPageCharacters.results) {
+        this.characterResults.push(results);
+      }
     }
   }
 }

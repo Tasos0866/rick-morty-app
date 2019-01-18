@@ -8,9 +8,9 @@ import { Observable } from "rxjs";
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  getCharacters(pageNumber: number = 1): Observable<AllCharacters> {
-    return this.http.get<AllCharacters>(
-      "https://rickandmortyapi.com/api/character/?page=" + pageNumber
-    );
+  async getCharacters(pageNumber: number = 1): Promise<any> {
+    return await this.http
+      .get("https://rickandmortyapi.com/api/character/?page=" + pageNumber)
+      .toPromise();
   }
 }

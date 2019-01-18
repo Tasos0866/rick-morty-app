@@ -1,4 +1,4 @@
-<div id="characterDiv" *ngFor="let char of allCharacters |
+<div id="characterDiv" *ngFor="let char of characterResults |
   paginate: {itemsPerPage: 8, currentPage: page}">
   <div id="content">
     <app-characters [character]="char"></app-characters>
