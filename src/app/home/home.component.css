@@ -1,8 +1,25 @@
+.container {
+  display: flex;
+  background-color: bisque;
+  height: 100%;
+}
+.center {
+  flex: auto;
+  width: 1200px;
+}
+.left {
+  flex: auto;
+  background-color: bisque;
+}
+.right {
+  flex: auto;
+  background-color: bisque;
+}
 #characterDiv {
   position: relative;
-  min-width: 25%;
-  max-height: 70%;
-  margin-bottom: 50px;
+  width: 18vw;
+  min-width: 230px;
+  margin-top: 50px;
   display: inline-table;
   table-layout: fixed;
 }
