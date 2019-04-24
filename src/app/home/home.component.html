@@ -1,5 +1,6 @@
 <div id="characterDiv" *ngFor="let char of characterResults |
-  paginate: {itemsPerPage: 8, currentPage: page}">
+  paginate: {itemsPerPage: 8, currentPage: page, totalItems:
+  characters?.count}">
   <div id="content">
     <app-characters [character]="char"></app-characters>
   </div>

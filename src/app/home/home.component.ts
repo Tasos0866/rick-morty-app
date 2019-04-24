@@ -8,17 +8,17 @@ import { send } from "q";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent implements OnInit {
-  currentPageCharacters: AllCharacters;
   characterResults: Character[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
-  async ngOnInit() {
+  ngOnInit() {
     for (let page = 1; page <= 20; page++) {
-      this.currentPageCharacters = await this.apiService.getCharacters(page);
-      for (let results of this.currentPageCharacters.results) {
-        this.characterResults.push(results);
-      }
+      this.apiService.getCharacters(page).subscribe(characters => {
+        for (let char of characters.results) {
+          this.characterResults.push(char);
+        }
+      });
     }
   }
 }

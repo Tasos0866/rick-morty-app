@@ -6,11 +6,10 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class ApiService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  async getCharacters(pageNumber: number = 1): Promise<any> {
-    return await this.http
-      .get("https://rickandmortyapi.com/api/character/?page=" + pageNumber)
-      .toPromise();
+  getCharacters(pageNumber: number = 1): Observable<any> {
+    return this.http
+      .get("https://rickandmortyapi.com/api/character/?page=" + pageNumber);
   }
 }
