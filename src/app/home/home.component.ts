@@ -9,8 +9,12 @@ import { send } from 'q';
 })
 export class HomeComponent implements OnInit {
   characterResults: Character[] = [];
+  characters: Info;
+  page: number;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {
+    this.page = 1;
+  }
 
   ngOnInit() {
     for (let page = 1; page <= 20; page++) {
@@ -20,6 +24,5 @@ export class HomeComponent implements OnInit {
         }
       });
     }
-    console.log(this.characterResults);
   }
 }
