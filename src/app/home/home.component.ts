@@ -28,9 +28,9 @@ export class HomeComponent implements OnInit {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (event.key === "ArrowLeft" && this.page > 1) {
+    if (event.key === 'ArrowLeft' && this.page > 1) {
       this.page--;
-    } else if (event.key === "ArrowRight" && this.page < 50) {
+    } else if (event.key === 'ArrowRight' && this.page < 50) {
       this.page++;
     }
   }
