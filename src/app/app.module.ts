@@ -10,7 +10,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { routeConfig } from './nav-bar/routeConfig';
 import { CharactersComponent } from './characters/characters.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -20,7 +19,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    AboutComponent,
     CharactersComponent,
     PageNotFoundComponent
   ],
