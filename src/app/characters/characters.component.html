@@ -2,33 +2,34 @@
     <img
         mat-card-image
         class="card-image"
-        src="{{ character.image }}"
-        />
+        src="{{ character.image }}"/>
     <mat-card-title-group class="title-group">
-        <mat-card-title class="name">&nbsp;&nbsp;{{ character.name
-            }}</mat-card-title>
+        <mat-card-title class="name">
+            &nbsp;&nbsp;{{ character.name}}
+        </mat-card-title>
     </mat-card-title-group>
-
     <mat-list class="card-list">
-        <mat-list-item class="item">STATUS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            {{
-            character.status }}</mat-list-item>
+        <mat-list-item class="item">
+            STATUS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{character.status }}
+        </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>SPECIES: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
-            character.species }}</mat-list-item>
+        <mat-list-item>
+            SPECIES: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{character.species }}
+        </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item>GENDER: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{
-            character.gender
-            }}</mat-list-item>
+        <mat-list-item>GENDER: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{character.gender}}
+        </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item><p allign="left">ORIGIN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-            <p
-                allign="right">
-                {{
-                character.origin.name }}</mat-list-item>
+        <mat-list-item>
+            <p allign="left">ORIGIN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p allign="right">{{character.origin.name }}</p>
+            </mat-list-item>
             <mat-divider></mat-divider>
-            <mat-list-item><p>LAST LOCATION:&nbsp;&nbsp;</p> {{
-                character.location.name
-                }}</mat-list-item>
-        </mat-list>
-    </mat-card>
+            <mat-list-item>
+                <p>LAST LOCATION:&nbsp;&nbsp;</p> {{character.location.name}}
+        </mat-list-item>
+    </mat-list>
+</mat-card>
