@@ -1,6 +1,10 @@
 # RickMortyApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+All the characters from Rick & Morty in one place! Check it out [here](https://tasos0866.github.io/rick-morty-app/home)!
+
+---
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
 ## Development server
 
